@@ -16,14 +16,16 @@ collections described in the project spec:
     USERS, DIET_PLANS, USER_FILES
 """
 
-import sqlite3
 import os
+import sqlite3
 import uuid
 import json
 from datetime import datetime, timezone
 from contextlib import contextmanager
 
-DB_PATH = os.environ.get("DATABASE_URL", "sqlite:///cloud_diet_planner.db").replace("sqlite:///", "")
+DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///cloud_diet_planner.db")
+USE_POSTGRES = DATABASE_URL.startswith(("postgres://", "postgresql://"))
+DB_PATH = DATABASE_URL.replace("sqlite:///", "")
 
 
 def _now():
@@ -32,10 +34,30 @@ def _now():
 
 @contextmanager
 def get_conn():
-    """Provides a DB connection (this is the ONLY place that knows we use SQLite)."""
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA foreign_keys = ON")
+    """Open SQLite locally or shared Postgres when DATABASE_URL uses Postgres."""
+    if USE_POSTGRES:
+        import psycopg
+        from psycopg.rows import dict_row
+
+        raw_conn = psycopg.connect(DATABASE_URL, row_factory=dict_row)
+
+        class PostgresConnection:
+            """Keep the service SQL portable while SQLite uses qmark parameters."""
+
+            def execute(self, query, params=()):
+                return raw_conn.execute(query.replace("?", "%s"), params)
+
+            def commit(self):
+                return raw_conn.commit()
+
+            def close(self):
+                return raw_conn.close()
+
+        conn = PostgresConnection()
+    else:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA foreign_keys = ON")
     try:
         yield conn
         conn.commit()
