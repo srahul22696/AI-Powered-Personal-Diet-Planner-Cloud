@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Asha Verma",
+    "email": "asha.demo@example.com",
+    "password": "demoPass123",
+    "age": 24,
+    "height_cm": 162,
+    "weight_kg": 58,
+    "activity_level": "moderate",
+    "dietary_preference": "vegetarian",
+    "goal": "maintenance"
+  },
+  {
+    "name": "Rohan Mehta",
+    "email": "rohan.demo@example.com",
+    "password": "demoPass123",
+    "age": 28,
+    "height_cm": 175,
+    "weight_kg": 82,
+    "activity_level": "active",
+    "dietary_preference": "non_vegetarian",
+    "goal": "weight_loss"
+  },
+  {
+    "name": "Priya Nair",
+    "email": "priya.demo@example.com",
+    "password": "demoPass123",
+    "age": 21,
+    "height_cm": 158,
+    "weight_kg": 50,
+    "activity_level": "light",
+    "dietary_preference": "vegan",
+    "goal": "weight_gain"
+  }
+]

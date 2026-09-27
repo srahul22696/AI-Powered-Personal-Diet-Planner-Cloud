@@ -1,0 +1,33 @@
+{
+  "breakfast": [
+    {"name": "Vegetable Oats Porridge", "diet": ["veg", "vegan"], "kcal": 320, "protein_g": 10, "carbs_g": 52, "fat_g": 7},
+    {"name": "Moong Dal Chilla with Mint Chutney", "diet": ["veg", "vegan"], "kcal": 280, "protein_g": 14, "carbs_g": 38, "fat_g": 6},
+    {"name": "Boiled Eggs with Whole Wheat Toast", "diet": ["nonveg"], "kcal": 340, "protein_g": 20, "carbs_g": 30, "fat_g": 14},
+    {"name": "Greek Yogurt with Mixed Fruits", "diet": ["veg"], "kcal": 260, "protein_g": 15, "carbs_g": 34, "fat_g": 6},
+    {"name": "Tofu Bhurji with Multigrain Roti", "diet": ["veg", "vegan"], "kcal": 310, "protein_g": 18, "carbs_g": 30, "fat_g": 11},
+    {"name": "Chicken Sausage Omelette", "diet": ["nonveg"], "kcal": 350, "protein_g": 24, "carbs_g": 12, "fat_g": 22}
+  ],
+  "lunch": [
+    {"name": "Rajma Chawal with Salad", "diet": ["veg", "vegan"], "kcal": 520, "protein_g": 20, "carbs_g": 85, "fat_g": 9},
+    {"name": "Grilled Paneer with Quinoa Pulao", "diet": ["veg"], "kcal": 540, "protein_g": 26, "carbs_g": 60, "fat_g": 18},
+    {"name": "Grilled Chicken Breast with Brown Rice", "diet": ["nonveg"], "kcal": 560, "protein_g": 42, "carbs_g": 55, "fat_g": 14},
+    {"name": "Chana Masala with Multigrain Roti", "diet": ["veg", "vegan"], "kcal": 500, "protein_g": 19, "carbs_g": 78, "fat_g": 10},
+    {"name": "Fish Curry with Steamed Rice", "diet": ["nonveg"], "kcal": 530, "protein_g": 35, "carbs_g": 58, "fat_g": 13},
+    {"name": "Sprouts and Vegetable Khichdi", "diet": ["veg", "vegan"], "kcal": 460, "protein_g": 17, "carbs_g": 70, "fat_g": 8}
+  ],
+  "snack": [
+    {"name": "Roasted Chana with Green Tea", "diet": ["veg", "vegan"], "kcal": 160, "protein_g": 8, "carbs_g": 22, "fat_g": 4},
+    {"name": "Fruit Bowl with Peanut Butter", "diet": ["veg", "vegan"], "kcal": 200, "protein_g": 6, "carbs_g": 28, "fat_g": 8},
+    {"name": "Buttermilk with Roasted Makhana", "diet": ["veg"], "kcal": 150, "protein_g": 5, "carbs_g": 18, "fat_g": 5},
+    {"name": "Boiled Egg Whites with Cucumber", "diet": ["nonveg"], "kcal": 130, "protein_g": 14, "carbs_g": 6, "fat_g": 3},
+    {"name": "Handful of Mixed Nuts", "diet": ["veg", "vegan"], "kcal": 180, "protein_g": 6, "carbs_g": 8, "fat_g": 15}
+  ],
+  "dinner": [
+    {"name": "Vegetable Soup with Grilled Tofu", "diet": ["veg", "vegan"], "kcal": 380, "protein_g": 18, "carbs_g": 40, "fat_g": 12},
+    {"name": "Dal Palak with Jeera Rice", "diet": ["veg", "vegan"], "kcal": 420, "protein_g": 16, "carbs_g": 65, "fat_g": 8},
+    {"name": "Grilled Fish with Steamed Vegetables", "diet": ["nonveg"], "kcal": 400, "protein_g": 34, "carbs_g": 20, "fat_g": 16},
+    {"name": "Paneer Tikka with Salad", "diet": ["veg"], "kcal": 410, "protein_g": 24, "carbs_g": 22, "fat_g": 22},
+    {"name": "Chicken Stew with Multigrain Roti", "diet": ["nonveg"], "kcal": 440, "protein_g": 32, "carbs_g": 40, "fat_g": 14},
+    {"name": "Mixed Vegetable Curry with Brown Rice", "diet": ["veg", "vegan"], "kcal": 400, "protein_g": 14, "carbs_g": 62, "fat_g": 9}
+  ]
+}
