@@ -14,3 +14,20 @@ services:
         generateValue: true
       - key: JWT_SECRET_KEY
         generateValue: true
+
+  - type: web
+    name: goodfood-studio
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: goodfood-studio-api
+          envVarKey: RENDER_EXTERNAL_URL
