@@ -5,7 +5,10 @@
  * here, so the base URL and auth-token handling live in exactly one place.
  */
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.PROD
+    ? "https://goodfood-studio-api.vercel.app"
+    : "http://localhost:5000");
 
 function getToken() {
   return localStorage.getItem("access_token");
